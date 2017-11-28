@@ -42,6 +42,7 @@ Pour cela on utilise les balises :
  
 Le code se trouvant dans une zone de code PHP ne sera pas affiché à l'utilisateur.
 Il servira à donner des instructions.
+Chaque instruction se termine par un `;`.
  
 Nos premières instructions sont :
 
@@ -164,3 +165,36 @@ Cette fonction renvoie vrai si la clé existe dans le tableau et faux si elle n'
 
 La condition `if ( isset($_GET['dice4']) )` revient à tester si la case du dé numéro 4 a été cochée.
 Cette condition revient donc à tester si l'on souhaite conserver le dé numéro 4 au prochain lancé.
+
+
+
+Étape 9
+------
+
+__Objectif__ : Conserver la valeur des case à cocher entre chaque lancé
+
+__Exemple__ : [code](step9.php) | [résultat](http://php.baddum.com/jour1/step9.php)
+
+__Ce que l'on retient__ :
+
+La structure du HTML généré en PHP est importante.
+
+Il est important de régulièrement regarder la source des pages HTML que l'on produit
+
+
+
+Étape 10
+------
+
+__Objectif__ : Utiliser un tableau pour conserver la valeur de nos dés
+
+__Exemple__ : [code](step10.php) | [résultat](http://php.baddum.com/jour1/step10.php)
+
+__Ce que l'on retient__ :
+
+Si l'on souhaite ajouter un numéro à notre variable, comme dans le cas de `dice2`, c'est potentiellement un signe qu'utiliser un tableau serait plus pratique.
+
+Pour déclarer un nouveau tableau, on écrit : `$variable = array();`.
+
+Pour déclarer une nouvelle paire de clé et valeur dans un tableau existant, on écrit : `$variable['clé'] = 'valeur';`. 
+
