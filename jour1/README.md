@@ -53,3 +53,16 @@ C'est ce dont on a besoin pour réaliser notre premier lancé de dé.
 Un exemple de lancé de dé : [code](step3.php) | [résultat](http://php.baddum.com/jour1/step3.php)
 
 
+
+Étape 4
+------
+
+Si PHP peut augmenter du texte, il est le plus souvent utilisé pour augmenter de l'HTML.
+
+D'ailleurs PHP veut dire "PHP: Hypertext Preprocessor".
+
+En ajoutant un formulaire HTML à notre page, on peut faciliter le rechargement et donc le fait de relancer notre dé.
+ 
+Un exemple de HTML augmenté par PHP : [code](step4.php) | [résultat](http://php.baddum.com/jour1/step4.php)
+
+

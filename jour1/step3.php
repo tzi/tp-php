@@ -6,4 +6,4 @@ $dice = mt_rand(1, 6);
 
 // La variable $dice contient alors le résultat d'un lancement de dé, différent à chaque chargement de la page
 ?>
-Votre lancé de dé : <?php echo $dice ?>!
+Votre lancé de dé : <?php echo $dice ?>
