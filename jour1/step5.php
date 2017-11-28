@@ -1,6 +1,6 @@
 <?php
 
-// Lancé de 3 dés aléatoirement
+// Lancé de 5 dés aléatoirement
 $dice1 = mt_rand(1, 6);
 $dice2 = mt_rand(1, 6);
 $dice3 = mt_rand(1, 6);
@@ -8,7 +8,7 @@ $dice4 = mt_rand(1, 6);
 $dice5 = mt_rand(1, 6);
 ?>
 <form>
-    <p>Vous avez lancé 3 dés : </p>
+    <p>Votre lancé de dés : </p>
     <ul>
         <li><?php echo $dice1 ?></li>
         <li><?php echo $dice2 ?></li>

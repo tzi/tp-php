@@ -109,11 +109,58 @@ __Ce que l'on retient__ :
 Les champs de formulaires HTML `<input>` vont permettre à l'utilisateur d'interagir avec la page.
 Pour faire une case à cocher il faut que je précise le type de champs de formulaire à l'aide de l'attribut `type` : `<input type="checkbox" />`.
 
+
+
+Étape 7
+------
+
+__Objectif__ : Récupérer la valeur des cases à cocher
+
+__Exemple__ : [code](step7.php) | [résultat](http://php.baddum.com/jour1/step7.php)
+
+__Ce que l'on retient__ :
+
 Je peux récupérer l'état du formulaire HTML en PHP, après sa validation. Pour cela, je vais utiliser la variable `$_GET`.
 Il s'agit d'une variable réservé par PHP, nous n'avons pas besoin de la déclarer.
 On peut trouver sa documentation ici : http://php.net/manual/fr/reserved.variables.get.php
 
 La variable `$_GET` contient un tableau. On peut l'afficher à l'aide de l'instruction `print_r($_GET)`.
-L'instruction `echo` est peu utile lorsque l'on souhaite afficher le contenu d'un tableau.
+L'instruction `echo` utilisé précédement pour afficher du texte, est peu utile pour visualiser le contenu d'un tableau. 
+
+Les tableaux en PHP associent des valeurs à des noms (aussi appeler clés).
+Par exemple, un tableau de notes d'élèves ressemblerait à ça : `Array ( [Markus] => 12 [Chaïma] => 18 )`.
+On associe alors des notes (les valeurs) aux noms des élèves (les clés). 
+
+Dans notre TP, on associe la valeur du dé au numéro du dé.
+Par exemple, on associe 5 (la valeur du dé) à la clé `dice1` dans le tableau suivant :  
+`Array ( [dice1] => 5 [dice2] => 6 [dice3] => 5 [dice4] => 5 )`.
 
 
+
+Étape 8
+------
+
+__Objectif__ : Conserver la valeur des dés dont les cases ont été cochées
+
+__Exemple__ : [code](step8.php) | [résultat](http://php.baddum.com/jour1/step8.php)
+
+__Ce que l'on retient__ :
+
+Les instructions `if` / `else` permet d'ajouter des conditions.
+
+```php
+if (condition) {
+    faire ceci si la condition est vrai;
+} else {
+    sinon faire cela;
+}
+```
+
+Pour accéder à une valeur dans un tableau j'utilise la notation suivante `$tableau['clé']`.
+Dans notre cas, pour accéder à la valeur du dé numéro 4 nous devons écrire `$_GET['dice4']`.
+
+Pour savoir si une clé existe dans un tableau, on peut utiliser la fonction `isset($tableau['clé'])`.
+Cette fonction renvoie vrai si la clé existe dans le tableau et faux si elle n'existe pas.
+
+La condition `if ( isset($_GET['dice4']) )` revient à tester si la case du dé numéro 4 a été cochée.
+Cette condition revient donc à tester si l'on souhaite conserver le dé numéro 4 au prochain lancé.
