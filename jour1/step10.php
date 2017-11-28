@@ -56,7 +56,7 @@ if ( isset($_GET['dice5']) ) {
                 type="checkbox"
                 name="dice1"
                 value="<?php echo $dice[1] ?>"
-                <?php if ( isset($_GET['dice[1]']) ) { echo 'checked'; } ?>
+                <?php if ( isset($_GET['dice1']) ) { echo 'checked'; } ?>
             >
             <?php echo $dice[1]; ?>
         </li>

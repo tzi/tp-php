@@ -198,3 +198,26 @@ Pour déclarer un nouveau tableau, on écrit : `$variable = array();`.
 
 Pour déclarer une nouvelle paire de clé et valeur dans un tableau existant, on écrit : `$variable['clé'] = 'valeur';`. 
 
+
+
+Étape 11
+------
+
+__Objectif__ : Utiliser une boucle pour générer l'affichage du lancé de dé.
+
+__Exemple__ : [code](step11.php) | [résultat](http://php.baddum.com/jour1/step11.php)
+
+__Ce que l'on retient__ :
+
+L'instruction `foreach()` permet de boucler sur un tableau, c'est à dire d'exécuter certaines instructions pour chaque clé et valeur d'un tableau.
+
+Par exemple : 
+
+```php
+foreach ($tableau as $clé => $valeur) {
+    // L'instruction ci-dessous va être exécutée plusieurs fois
+    // A chaque fois la variable $valeur contiendra une valeur différente contenu dans le tableau
+    echo $valeur;
+}
+// Ce code affiche donc toutes les valeurs contenu dans le tableau $tableau 
+``` 
