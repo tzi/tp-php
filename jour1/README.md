@@ -66,3 +66,14 @@ En ajoutant un formulaire HTML à notre page, on peut faciliter le rechargement 
 Un exemple de HTML augmenté par PHP : [code](step4.php) | [résultat](http://php.baddum.com/jour1/step4.php)
 
 
+
+Étape 5
+------
+
+Le jeu n'a aucun intérêt avec un seul dé, essayons plutôt d'en lancer 5 !
+
+Avec nos connaissances actuelles, la méthode la plus simple est de créer 5 variables.  
+ 
+Un exemple avec 5 dés : [code](step5.php) | [résultat](http://php.baddum.com/jour1/step5.php)
+
+
