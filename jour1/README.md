@@ -129,7 +129,7 @@ On peut trouver sa documentation ici : http://php.net/manual/fr/reserved.variabl
 La variable `$_GET` contient un tableau. On peut l'afficher à l'aide de l'instruction `print_r($_GET)`.
 L'instruction `echo` utilisée précédement pour afficher du texte, est peu utile pour visualiser le contenu d'un tableau. 
 
-Les tableaux en PHP associent des valeurs à des noms, ces noms sont aussi appeler clefs.
+Les tableaux en PHP associent des valeurs à des noms, aussi appelés clefs.
 Par exemple, un tableau de notes d'élèves ressemblerait à ça : `Array ( [Markus] => 12 [Chaïma] => 18 )`.
 On associe alors des notes (les valeurs) aux noms des élèves (les clefs).
 
@@ -218,8 +218,8 @@ Par exemple :
 ```php
 foreach ($tableau as $clef => $valeur) {
     // L'instruction ci-dessous va être exécutée plusieurs fois
-    // A chaque fois la variable $valeur contiendra une valeur différente contenu dans le tableau
+    // A chaque fois la variable $valeur contiendra une valeur différente contenue dans le tableau
     echo $valeur;
 }
-// Ce code affiche donc toutes les valeurs contenu dans le tableau $tableau 
+// Ce code affiche donc toutes les valeurs contenues dans le tableau $tableau 
 ``` 
