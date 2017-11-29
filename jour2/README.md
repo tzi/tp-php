@@ -172,7 +172,7 @@ Voici un exemple d'utilisation :
 
 ```php
 $sushis = 6;
-echo "J'ai mangé " . $sushis . " suchis."; 
+echo "J'ai mangé " . $sushis . " sushis."; 
 ``` 
 
 
