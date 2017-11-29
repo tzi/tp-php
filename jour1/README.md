@@ -38,7 +38,7 @@ On peut utiliser PHP pour augmenter du texte simple.
 Pour cela on utilise les balises :
 
  * `<?php` pour expliciter le début d'une zone de code PHP
- * `?>` pour expliciter la fin d'une sone de code PHP
+ * `?>` pour expliciter la fin d'une zone de code PHP
  
 Le code se trouvant dans une zone de code PHP ne sera pas affiché à l'utilisateur.
 Il servira à donner des instructions.
@@ -46,8 +46,9 @@ Chaque instruction se termine par un `;`.
  
 Nos premières instructions sont :
 
- * `$variable = 'value'` pour déclarer une variable, ici on conserve le texte `'valeur'` dans la variable `$variable`
- * `echo $variable` permet d'afficher le contenu de la variable `$variable`, ici ce sera donc `valeur'.
+ * `$variable = 'valeur'` pour déclarer une variable, ici on conserve le texte `'valeur'` dans la variable `$variable`.
+ On note que les variables commencent par le caractère `$`. 
+ * `echo $variable` permet d'afficher le contenu de la variable `$variable`, ici ce sera donc `valeur`.
 
 
 
@@ -79,7 +80,7 @@ __Ce que l'on retient__ :
 
 Si PHP peut augmenter du texte, il est le plus souvent utilisé pour augmenter de l'HTML.
 
-D'ailleurs PHP veut dire "PHP: Hypertext Preprocessor".
+D'ailleurs PHP veut dire "PHP: Hypertext Preprocessor". Hypertext, comme dans HTML.
 
 En ajoutant un formulaire HTML à notre page, on facilite le rechargement et donc le fait de relancer notre dé.
 
@@ -108,7 +109,7 @@ __Exemple__ : [code](step6.php) | [résultat](http://php.baddum.com/jour1/step6.
 __Ce que l'on retient__ :
 
 Les champs de formulaires HTML `<input>` vont permettre à l'utilisateur d'interagir avec la page.
-Pour faire une case à cocher il faut que je précise le type de champs de formulaire à l'aide de l'attribut `type` : `<input type="checkbox" />`.
+Pour faire une case à cocher, il faut que je précise le type de champ de formulaire à l'aide de l'attribut `type` : `<input type="checkbox" />`.
 
 
 
@@ -122,18 +123,18 @@ __Exemple__ : [code](step7.php) | [résultat](http://php.baddum.com/jour1/step7.
 __Ce que l'on retient__ :
 
 Je peux récupérer l'état du formulaire HTML en PHP, après sa validation. Pour cela, je vais utiliser la variable `$_GET`.
-Il s'agit d'une variable réservé par PHP, nous n'avons pas besoin de la déclarer.
+Il s'agit d'une variable réservée par PHP, nous n'avons pas besoin de la déclarer.
 On peut trouver sa documentation ici : http://php.net/manual/fr/reserved.variables.get.php
 
 La variable `$_GET` contient un tableau. On peut l'afficher à l'aide de l'instruction `print_r($_GET)`.
-L'instruction `echo` utilisé précédement pour afficher du texte, est peu utile pour visualiser le contenu d'un tableau. 
+L'instruction `echo` utilisée précédement pour afficher du texte, est peu utile pour visualiser le contenu d'un tableau. 
 
-Les tableaux en PHP associent des valeurs à des noms (aussi appeler clés).
+Les tableaux en PHP associent des valeurs à des noms, ces noms sont aussi appeler clefs.
 Par exemple, un tableau de notes d'élèves ressemblerait à ça : `Array ( [Markus] => 12 [Chaïma] => 18 )`.
-On associe alors des notes (les valeurs) aux noms des élèves (les clés). 
+On associe alors des notes (les valeurs) aux noms des élèves (les clefs).
 
 Dans notre TP, on associe la valeur du dé au numéro du dé.
-Par exemple, on associe 5 (la valeur du dé) à la clé `dice1` dans le tableau suivant :  
+Par exemple, on associe 5 (la valeur du dé) à la clef `dice1` dans le tableau suivant :  
 `Array ( [dice1] => 5 [dice2] => 6 [dice3] => 5 [dice4] => 5 )`.
 
 
@@ -147,7 +148,7 @@ __Exemple__ : [code](step8.php) | [résultat](http://php.baddum.com/jour1/step8.
 
 __Ce que l'on retient__ :
 
-Les instructions `if` / `else` permet d'ajouter des conditions.
+Les instructions `if` / `else` permettent d'ajouter des conditions.
 
 ```php
 if (condition) {
@@ -157,13 +158,14 @@ if (condition) {
 }
 ```
 
-Pour accéder à une valeur dans un tableau j'utilise la notation suivante `$tableau['clé']`.
+Pour accéder à une valeur dans un tableau, on utilise la notation suivante `$tableau['clef']`.
+Par exemple, pour accéder à la note de Chaïma nous devons écrire `$notes['Chaïma']`.
 Dans notre cas, pour accéder à la valeur du dé numéro 4 nous devons écrire `$_GET['dice4']`.
 
-Pour savoir si une clé existe dans un tableau, on peut utiliser la fonction `isset($tableau['clé'])`.
-Cette fonction renvoie vrai si la clé existe dans le tableau et faux si elle n'existe pas.
+Pour savoir si une clef existe dans un tableau, on peut utiliser la fonction `isset( $tableau['clef'] )`.
+Cette fonction renvoie vrai si la clef existe dans le tableau et faux si elle n'existe pas.
 
-La condition `if ( isset($_GET['dice4']) )` revient à tester si la case du dé numéro 4 a été cochée.
+La condition `if ( isset( $_GET['dice4'] ) )` revient à tester si la case du dé numéro 4 a été cochée.
 Cette condition revient donc à tester si l'on souhaite conserver le dé numéro 4 au prochain lancé.
 
 
@@ -196,7 +198,7 @@ Si l'on souhaite ajouter un numéro à notre variable, comme dans le cas de `dic
 
 Pour déclarer un nouveau tableau, on écrit : `$variable = array();`.
 
-Pour déclarer une nouvelle paire de clé et valeur dans un tableau existant, on écrit : `$variable['clé'] = 'valeur';`. 
+Pour déclarer une nouvelle paire de clef et valeur dans un tableau existant, on écrit : `$variable['clef'] = 'valeur';`. 
 
 
 
@@ -209,12 +211,12 @@ __Exemple__ : [code](step11.php) | [résultat](http://php.baddum.com/jour1/step1
 
 __Ce que l'on retient__ :
 
-L'instruction `foreach()` permet de boucler sur un tableau, c'est à dire d'exécuter certaines instructions pour chaque clé et valeur d'un tableau.
+L'instruction `foreach()` permet de boucler sur un tableau, c'est à dire d'exécuter certaines instructions pour chaque clef et valeur d'un tableau.
 
 Par exemple : 
 
 ```php
-foreach ($tableau as $clé => $valeur) {
+foreach ($tableau as $clef => $valeur) {
     // L'instruction ci-dessous va être exécutée plusieurs fois
     // A chaque fois la variable $valeur contiendra une valeur différente contenu dans le tableau
     echo $valeur;
