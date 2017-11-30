@@ -20,7 +20,7 @@ Quelques consignes :
 
 __Objectif__ : Créer le formulaire pour proposer une réponse
 
-__Exemple__ : [résultat](http://php.baddum.com/jour2/step1.php)
+__Exemple__ : [code](step1.php) | [résultat](http://php.baddum.com/jour2/step1.php)
 
 __Les indications__ :
 
@@ -39,7 +39,7 @@ Vous devez utiliser les balises suivantes :
 
 __Objectif__ : Afficher la réponse proposée par le joueur, s'il y en a une !
 
-__Exemple__ : [résultat](http://php.baddum.com/jour2/step2.php)
+__Exemple__ : [code](step2.php) | [résultat](http://php.baddum.com/jour2/step2.php)
 
 __Les indications__ :
 
@@ -57,7 +57,7 @@ Pour cela vous aurez besoin des éléments suivants :
 
 __Objectif__ : Tirer au hasard un nombre entre 1 et 3, et vérifier la réponse proposée par le joueur
 
-__Exemple__ : [résultat](http://php.baddum.com/jour2/step3.php)
+__Exemple__ : [code](step3.php) | [résultat](http://php.baddum.com/jour2/step3.php)
 
 __Les indications__ :
 
@@ -86,7 +86,7 @@ if ($nombre1 == $nombre2) {
 
 __Objectif__ : Conserver le nombre tiré au hasard entre deux essais
 
-__Exemple__ : [résultat](http://php.baddum.com/jour2/step4.php)
+__Exemple__ : [code](step4.php) | [résultat](http://php.baddum.com/jour2/step4.php)
 
 __Les indications__ :
 
@@ -103,7 +103,7 @@ Pour cela vous aurez besoin :
 
 __Objectif__ : Tirer un nouveau nombre au hasard si le précédent a été trouvé
 
-__Exemple__ : [résultat](http://php.baddum.com/jour2/step5.php)
+__Exemple__ : [code](step5.php) | [résultat](http://php.baddum.com/jour2/step5.php)
 
 
 
@@ -112,7 +112,7 @@ __Exemple__ : [résultat](http://php.baddum.com/jour2/step5.php)
 
 __Objectif__ : Tirer un nombre au hasard entre 1 et 5
 
-__Exemple__ : [résultat](http://php.baddum.com/jour2/step6.php)
+__Exemple__ : [code](step6.php) | [résultat](http://php.baddum.com/jour2/step6.php)
 
 __Les indications__ :
 
@@ -137,7 +137,7 @@ if ( $AfficherUnMessage ) {
 
 __Objectif__ : Conserver la valeur proposée dans le champs de formulaire. La valeur par défaut doit être 0 si aucune réponse n'a encore été proposée.
 
-__Exemple__ : [résultat](http://php.baddum.com/jour2/step7.php)
+__Exemple__ : [code](step7.php) | [résultat](http://php.baddum.com/jour2/step7.php)
 
 
 
@@ -146,7 +146,7 @@ __Exemple__ : [résultat](http://php.baddum.com/jour2/step7.php)
 
 __Objectif__ : Compter le nombre d'éssai utilisés par le joueur pour trouver le bon nombre
 
-__Exemple__ : [résultat](http://php.baddum.com/jour2/step8.php)
+__Exemple__ : [code](step8.php) | [résultat](http://php.baddum.com/jour2/step8.php)
 
 __Les indications__ :
 
@@ -182,7 +182,7 @@ echo "J'ai mangé " . $sushis . " sushis.";
 
 __Objectif__ : Tirer un nombre aléatoire entre 1 et 100, et indiquer au joueur si son nombre est trop grand ou trop petit.
 
-__Exemple__ : [résultat](http://php.baddum.com/jour2/step9.php)
+__Exemple__ : [code](step9.php) | [résultat](http://php.baddum.com/jour2/step9.php)
 
 __Les indications__ :
 
@@ -198,19 +198,3 @@ if ( $age < 16 ) {
   echo "Peux conduire";
 }
 ```
-
-
-
-Étape 10
-------
-
-__Objectif__ : Demander au joueur la valeur maximale du tirage aléatoire avant d'effectuer un tirage
-
-
-
-Étape 11
-------
-
-__Objectif__ : Si le joueur est à plus de 3 de la cible, la cible se déplace d'une valeur aléatoire entre -3 et +3.
-
-Attention, la cible ne peut toujours pas être inférieur à 1 ou supérieur à la valeur choisie par le joueur.
